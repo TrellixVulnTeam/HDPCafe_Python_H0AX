@@ -5,7 +5,7 @@ from core.keluarAplikasi import keluarAplikasi
 from core.auth import auth
 
 print("=============")
-print("1. Masuk Sebagai Admin HDP Mart")
+print("1. Masuk Sebagai Admin")
 print("2. Masuk Sebagai Pembeli")
 print("3. Tentang Aplikasi")
 print("4. Keluar")
