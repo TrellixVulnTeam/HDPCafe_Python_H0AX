@@ -3,8 +3,6 @@
 # untuk ini buat jalaninnya harus pake CMD gabisa pake pycharm, soalnya di pycharm masih ada bugnya masalah getPass!
 
 import getpass
-import os
-import header
 
 def auth():
     print("=============================")
@@ -32,5 +30,3 @@ def auth():
         print()
         z = input('Input username dan password lagi ? ya/tidak ?')
         print()
-        os.system('cls')
-        header.header()
