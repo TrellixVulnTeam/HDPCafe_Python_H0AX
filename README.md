@@ -1,3 +1,10 @@
+ _   _ ____  ____    __  __    _    ____ _____ 
+| | | |  _ \|  _ \  |  \/  |  / \  |  _ \_   _|
+| |_| | | | | |_) | | |\/| | / _ \ | |_) || |  
+|  _  | |_| |  __/  | |  | |/ ___ \|  _ < | |  
+|_| |_|____/|_|     |_|  |_/_/   \_\_| \_\|_| 
+
+
 # HDP Mart
 python basic applications about the purchase of goods in mini market, and this project is made based on fulfilling the big task of basic algorithm course and programming at telkom university majoring in computation science.
 
