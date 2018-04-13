@@ -7,6 +7,8 @@ import os
 #import header
 import json
 
+from core.admin.main_admin import main_admin
+
 def auth():
     print("=============================")
     print("Selamat Datang di HDP Mart!")
@@ -22,8 +24,9 @@ def auth():
         pwd = getpass.getpass('Password = ')
         for x in acc:
             if (user == x[0]) and (pwd == x[1]) :
-                print ('Selamat Datang',user,'Tekan Enter untuk lanjut')
-                input()
+                #print ('Selamat Datang',user,'Tekan Enter untuk lanjut')
+                #input()
+                main_admin()
                 z = True
                 break
             elif (user == x[0]) and pwd != x[1]:

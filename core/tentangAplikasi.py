@@ -14,8 +14,8 @@ def tentangAplikasi():
 
     print()
     print("====================================")
-    print()
-    print("Kembali ke Menu Sebelumnya?")
+    print("Kembali Ke Menu Sebelumnya?")
+    print("====================================")
     print()
     print("1. Ya")
     print("2. Tidak")

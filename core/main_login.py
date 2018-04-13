@@ -2,6 +2,8 @@
 
 from core.tentangAplikasi import tentangAplikasi
 from core.keluarAplikasi import keluarAplikasi
+from core.admin.main_admin import main_admin
+from core.user.main_user import main_user
 
 #Pendukung untuk membuat Asci Art
 import sys
@@ -13,21 +15,21 @@ from pyfiglet import figlet_format
 init(strip=not sys.stdout.isatty())
 cprint(figlet_format('HDP MART!', font='isometric4'))
 
+print("====================================")
 print("Selamat Datang Di HDP Mart")
+print("====================================")
 print()
-print("=============")
 print("1. Masuk Sebagai Admin")
 print("2. Masuk Sebagai Pembeli")
 print("3. Tentang Aplikasi")
 print("4. Keluar")
-print("=============")
 print()
 
 pilih=int(input("Masukkan Pilihan : "))
 if pilih == 1 :
-    print("hi")
+    main_admin()
 elif pilih ==2 :
-    print("hi")
+    main_user()
 elif pilih == 3 :
     tentangAplikasi()
 elif pilih == 4 :
