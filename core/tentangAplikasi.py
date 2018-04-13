@@ -12,4 +12,19 @@ def tentangAplikasi():
     print()
     print("Ilmu Komputasi, Tugas Besar Algoritma Dasar Pemograman 2018.")
 
+    print()
+    print("====================================")
+    print()
+    print("Kembali ke Menu Sebelumnya?")
+    print()
+    print("1. Ya")
+    print("2. Tidak")
+    print()
+    pilihKembali = int(input("Masukkan Pilihan : "))
+
+    if pilihKembali == 1:
+        print("Kembali")
+    elif pilihKembali == 2:
+        print("Tidak Jadi")
+
     return tentangAplikasi()
