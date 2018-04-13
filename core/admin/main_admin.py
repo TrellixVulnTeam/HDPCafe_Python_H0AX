@@ -1,4 +1,4 @@
-# Tampilan Awal User
+# Tampilan Awal Admin
 
 from core.tentangAplikasi import tentangAplikasi
 from core.keluarAplikasi import keluarAplikasi
@@ -14,7 +14,8 @@ from pyfiglet import figlet_format
 init(strip=not sys.stdout.isatty())
 cprint(figlet_format('HDP MART!', font='isometric4'))
 
-def main_user():
+
+def main_admin():
     print("Selamat Datang Di HDP Mart")
     print()
     print("=============")
@@ -35,4 +36,4 @@ def main_user():
     elif pilih == 4:
         keluarAplikasi()
 
-    return main_user()
+    return main_admin()
