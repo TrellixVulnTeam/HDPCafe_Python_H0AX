@@ -31,9 +31,8 @@ def auth():
             else:
                 print('Username/Password Salah')
             a = a+1
-            if a == 3 :
-                print ('sudah 3x input')
-                break
-            print()
-        os.system('cls')
-        #header.header()
+    if a == 3 :
+        print ('sudah 3x input')
+        print()
+    os.system('cls')
+    #header.header()
