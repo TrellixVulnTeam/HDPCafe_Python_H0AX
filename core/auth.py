@@ -4,7 +4,8 @@
 
 import getpass
 import os
-import header
+#import header
+import json
 
 def auth():
     print("=============================")
@@ -12,25 +13,27 @@ def auth():
     print("=============================")
     print()
 
-    z = 'ya'
+    conn=open("user/user.txt", "r")
+    acc=json.load(conn)
+    z = False
     a = 0
-    while z == 'ya' :
+    while not z :
         user = input('Username = ')
         pwd = getpass.getpass('Password = ')
-        if (user =='admin') and (pwd =='admin') :
-            print ('Selamat Datang',user,'Tekan Enter untuk lanjut')
-            input()
-            break
-        elif (user =='admin') or (pwd =='mimin') :
-            print ('Username/Password salah')
-        else :
-            print('Password Salah')
-        a = a+1
-        if a == 3 :
-            print ('sudah 3x input')
-            break
-        print()
-        z = input('Input username dan password lagi ? ya/tidak ?')
-        print()
+        for x in acc:
+            if (user == x[0]) and (pwd == x[1]) :
+                print ('Selamat Datang',user,'Tekan Enter untuk lanjut')
+                input()
+                z = True
+                break
+            elif (user == x[0]) and pwd != x[1]:
+                print('Password Salah')
+            else:
+                print('Username/Password Salah')
+            a = a+1
+            if a == 3 :
+                print ('sudah 3x input')
+                break
+            print()
         os.system('cls')
-        header.header()
+        #header.header()
