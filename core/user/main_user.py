@@ -1,17 +1,14 @@
 # Tampilan Awal User
 
-from core.auth import auth
-import os
-
 def main_user():
-    print("Selamat Datang Di HDP Mart")
+    print("Selamat Datang Di HDP Mart, Selamat Berbelanja!")
     print()
-    print("=============")
-    print("1. Menu User 1")
-    print("2. Menu User 1")
-    print("3. Menu User 1")
+    print("==================================")
+    print("1. Aneka Minuman")
+    print("2. Aneka Makanan")
+    print("3. Peralatan Rumah Tangga")
     print("4. Menu User 1")
-    print("=============")
+    print("==================================")
     print()
     pilih = int(input("Masukan Pilihan = "))
 
