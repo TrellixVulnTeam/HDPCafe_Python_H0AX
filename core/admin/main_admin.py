@@ -33,16 +33,15 @@ def main_admin():
             L=lihatBarang()
             if pilih == 1:
                 L1=tambahBarang(L)
-                simpanData(L1)
+                simpanData(L1, 'barang.txt')
             elif pilih == 2:
                 L1=updateBarang(L)
-                simpanData(L1)
+                simpanData(L1, 'barang.txt')
             elif pilih == 3:
-                pass
-                #hapusbarang()
+                L1=hapusBarang(L)
+                simpanData(L1, 'barang.txt')
             elif pilih == 4:
-                pass
-                #caribarang()
+                cariBarang(L)
             elif pilih == 5:
                 for x in L:
                     print(x)

@@ -2,22 +2,22 @@
 
 def updateBarang(L):
     n=len(L)
-    i=1
     for x in L:
         print(x)
     loop=True
     while loop:
+        i=1
         print("Pilih id barang yang ingin diubah", end=": ")
-        id=int(input())
-        while i<=(n-1) and i!=id:
-            i=i+1
-        if i==id:
+        id = int(input())
+        while i <= (n-1) and L[i][0] != id:
+            i = i+1
+        if L[i][0]==id:
             print("Masukkan data perubahan")
             print("Nama barang", end=": ")
             nama=input()
             print("Harga barang", end=": ")
             harga=int(input())
-            L[id-1]=[id,nama,harga]
+            L[i]=[id,nama,harga]
             for x in L:
                 print(x)
         else:

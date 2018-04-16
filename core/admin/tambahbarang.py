@@ -3,13 +3,22 @@
 def tambahBarang(L):
     loop = True
     while loop:
+        i=1
         x = len(L)
         print("Masukkan nama barang", end=": ")
         nama = input()
         print("Masukkan harga barang", end=": ")
         harga = int(input())
-        L1=[x+1,nama,harga]
+        L.sort()
+        while i-1<x:
+            if L[i-1][0]==i:
+                i=i+1
+            else:
+                n=i
+                break
+        L1 = [n,nama,harga]
         L.append(L1)
+        L.sort()
         for a in L:
             print(a)
         loop2 = True
