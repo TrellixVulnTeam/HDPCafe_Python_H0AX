@@ -1,5 +1,7 @@
 # Logic untuk pilihan melihat barang
-
+import json
 def lihatBarang():
-
-    return lihatBarang()
+    op=open("barang.txt", "r")
+    L=json.load(op)
+    op.close()
+    return L
