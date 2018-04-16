@@ -27,6 +27,7 @@ print()
 
 pilih=int(input("Masukkan Pilihan : "))
 if pilih == 1 :
+    #auth() JANGAN LUPA DIGANTI KE AUTH!
     main_admin()
 elif pilih ==2 :
     main_user()
