@@ -1,4 +1,4 @@
-# Logic Update Barang
+# Logic Update Barang.
 
 def updateBarang():
 
