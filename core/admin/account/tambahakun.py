@@ -1,5 +1,16 @@
 # logic untuk tambah akun
 
-def tambahAkun():
+def tambahAkun(L):
+    print()
+    print("===========================")
+    print("Tambah Akun HDP Mart.")
+    print("===========================")
+    print()
+    print("Masukkan Username\t\t: ", end="")
+    id = input()
+    print("Masukkan Password\t\t: ", end="")
+    password = input()
 
-    return tambahAkun()
+    recordAkun=[id,password]
+    L.append(recordAkun)
+    return L
