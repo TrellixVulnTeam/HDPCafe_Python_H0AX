@@ -1,13 +1,13 @@
-# Logic Tambah Barang kedalam list "L"
+# Logic Tambah Menu kedalam list "L"
 
-def tambahBarang(L):
+def tambahMenu(L):
     loop = True
     while loop:
         i=1
         x = len(L)
-        print("Masukkan nama barang", end=": ")
+        print("Masukkan nama menu", end=": ")
         nama = input()
-        print("Masukkan harga barang", end=": ")
+        print("Masukkan harga menu", end=": ")
         harga = int(input())
         L.sort()
         while i-1<x:
@@ -23,7 +23,7 @@ def tambahBarang(L):
             print(a)
         loop2 = True
         while loop2:
-            print("Apakah anda ingin menambahkan barang lagi?(Y/N)", end=": ")
+            print("Apakah anda ingin menambahkan menu lagi?(Y/N)", end=": ")
             jawab=input()
             if jawab == "N" or jawab == "n":
                 loop=False

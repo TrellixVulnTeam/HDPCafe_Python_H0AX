@@ -1,31 +1,31 @@
-# Logic Update Barang.
+# Logic Update Menu.
 
-def updateBarang(L):
+def updateMenu(L):
     n=len(L)
     for x in L:
         print(x)
     loop=True
     while loop:
         i=1
-        print("Pilih id barang yang ingin diubah", end=": ")
+        print("Pilih id menu yang ingin diubah", end=": ")
         id = int(input())
         while i <= (n-1) and L[i][0] != id:
             i = i+1
         if L[i][0]==id:
             print("Masukkan data perubahan")
-            print("Nama barang", end=": ")
+            print("Nama menu", end=": ")
             nama=input()
-            print("Harga barang", end=": ")
+            print("Harga menu", end=": ")
             harga=int(input())
             L[i]=[id,nama,harga]
             for x in L:
                 print(x)
         else:
-            print("Barang dengan id", id,"tidak ditemukan")
+            print("Menu dengan id", id,"tidak ditemukan")
             input()
         loop2=True
         while loop2:
-            print("Apakah anda ingin mengubah barang dengan id lain?(Y/N)", end=": ")
+            print("Apakah anda ingin mengubah menu dengan id lain?(Y/N)", end=": ")
             jawab=input()
             if jawab=="Y" or jawab=="y":
                 break

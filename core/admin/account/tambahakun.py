@@ -3,7 +3,7 @@
 def tambahAkun(L):
     print()
     print("===========================")
-    print("Tambah Akun HDP Mart.")
+    print("Tambah Akun HDP's Cafe.")
     print("===========================")
     print()
     print("Masukkan Username\t\t: ", end="")

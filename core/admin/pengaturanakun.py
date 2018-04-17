@@ -4,7 +4,7 @@ from core.admin.account.hapusakun import hapusAkun
 from core.admin.account.tambahakun import tambahAkun
 from core.admin.account.ubahpassword import ubahPassword
 from core.admin.simpanData import simpanData
-from core.admin.lihatbarang import lihatBarang
+from core.admin.lihatmenu import lihatMenu
 import os.path
 
 
@@ -12,11 +12,11 @@ import os.path
 def pengaturanAkun():
     scriptpath = os.path.dirname(__file__)
     filename = os.path.join(scriptpath, 'user.txt')
-    L = lihatBarang(filename)
+    L = lihatMenu(filename)
     print()
-    print("==============================================")
+    print("=======================")
     print("Pengaturan Akun")
-    print("==============================================")
+    print("=======================")
     print()
     print("1. Tambah Akun")
     print("2. Ubah Password")

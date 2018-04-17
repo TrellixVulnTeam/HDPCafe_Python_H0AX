@@ -12,7 +12,7 @@ from core.admin.main_admin import main_admin
 
 def auth():
     print("=============================")
-    print("Selamat Datang di HDP Mart!")
+    print("Selamat Datang di HDP's Cafe!")
     print("=============================")
     print()
     scriptpath = os.path.dirname(__file__)

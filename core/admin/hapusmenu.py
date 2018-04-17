@@ -1,13 +1,13 @@
-# Logic hapus barang, untuk menghapus elemen terakhir dari list L
+# Logic hapus menu, untuk menghapus elemen terakhir dari list L
 
-def hapusBarang(L):
+def hapusMenu(L):
     n = len(L)
     for x in L:
         print(x)
     loop = True
     while loop:
         i=0
-        print("Pilih id barang yang ingin dihapus", end=": ")
+        print("Pilih id menu yang ingin dihapus", end=": ")
         id = int(input())
         while i <= (n - 1) and L[i][0] != id:
             i = i + 1
@@ -16,11 +16,11 @@ def hapusBarang(L):
             for x in L:
                 print(x)
         else:
-            print("Barang dengan id", id, "tidak ditemukan")
+            print("Menu dengan id", id, "tidak ditemukan")
             input()
         loop2 = True
         while loop2:
-            print("Apakah anda ingin menghapus barang dengan id lain?(Y/N)", end=": ")
+            print("Apakah anda ingin menghapus menu dengan id lain?(Y/N)", end=": ")
             jawab = input()
             if jawab == "Y" or jawab == "y":
                 break

@@ -1,5 +1,5 @@
 import json
-def lihatBarang(nama):
+def lihatMenu(nama):
     op=open(nama, "r")
     L=json.load(op)
     op.close()

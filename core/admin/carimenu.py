@@ -1,7 +1,7 @@
-# Logic untuk mencari Barang
+# Logic untuk mencari Menu
 
 def cari(L, n):
-    print("Masukkan data barang yang dicari", end=": ")
+    print("Masukkan data menu yang dicari", end=": ")
     if n==1 or n==3:
         cari = int(input())
     else:
@@ -10,21 +10,21 @@ def cari(L, n):
     loop2 = True
     while i < len(L) and loop2:
         if L[i][n-1] == cari:
-            print("Barang ditemukan")
+            print("Menu ditemukan")
             print(L[i])
             input()
             loop2 = False
         else:
             i = i + 1
     if loop2:
-        print("Barang dengan data", cari, "tidak ditemukan")
+        print("Menu dengan data", cari, "tidak ditemukan")
         input()
 
-def cariBarang(L):
+def cariMenu(L):
     loop=True
     while loop:
         print("1. Cari berdasarkan ID")
-        print("2. Cari berdasarkan nama barang")
+        print("2. Cari berdasarkan nama menu")
         print("3. Cari berdasarkan harga")
         print("4. Kembali")
         print("Pilih menu (1-4)", end=": ")
