@@ -30,18 +30,18 @@ def main_admin():
         pilih = int(input("Masukan Pilihan = "))
 
         if os.path.exists("menu.txt"):
-            L=lihatBarang("menu.txt")
+            L=lihatMenu("menu.txt")
             if pilih == 1:
-                L1=tambahBarang(L)
+                L1=tambahMenu(L)
                 simpanData(L1, 'menu.txt')
             elif pilih == 2:
-                L1=updateBarang(L)
+                L1=updateMenu(L)
                 simpanData(L1, 'menu.txt')
             elif pilih == 3:
-                L1=hapusBarang(L)
+                L1=hapusMenu(L)
                 simpanData(L1, 'menu.txt')
             elif pilih == 4:
-                cariBarang(L)
+                cariMenu(L)
             elif pilih == 5:
                 for x in L:
                     print(x)
@@ -56,7 +56,7 @@ def main_admin():
         else:
             L=[]
             if pilih == 1:
-                L1=tambahBarang(L)
+                L1=tambahMenu(L)
                 simpanData(L1)
             elif pilih == 7:
                 break
