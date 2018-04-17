@@ -17,5 +17,3 @@ def hapusAkun():
         print("Akun Dihapus!")
     elif pilihHapus == 2:
         print("Tidak Jadi :D")
-
-    return hapusAkun()

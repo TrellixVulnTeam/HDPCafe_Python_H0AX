@@ -16,15 +16,11 @@ def tentangAplikasi():
     print("====================================")
     print("Kembali Ke Menu Sebelumnya?")
     print("====================================")
-    print()
+    #print()
     print("1. Ya")
-    print("2. Tidak")
-    print()
-    pilihKembali = int(input("Masukkan Pilihan : "))
+   #print("2. Tidak")
+    #print()
+    pilihKembali = int(input())
 
     if pilihKembali == 1:
-        print("Kembali")
-    elif pilihKembali == 2:
-        print("Tidak Jadi")
-
-    return tentangAplikasi()
+        pass

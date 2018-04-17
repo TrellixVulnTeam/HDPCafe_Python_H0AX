@@ -6,6 +6,7 @@ import getpass
 import os
 #import header
 import json
+import os.path
 
 from core.admin.main_admin import main_admin
 
@@ -14,8 +15,9 @@ def auth():
     print("Selamat Datang di HDP Mart!")
     print("=============================")
     print()
-
-    conn=open("user/user.txt", "r")
+    scriptpath = os.path.dirname(__file__)
+    filename = os.path.join(scriptpath, 'user.txt')
+    conn=open(filename, "r")
     acc=json.load(conn)
     z = False
     a = 0
@@ -24,19 +26,19 @@ def auth():
         #pwd = getpass.getpass('Password = ') Biar bisa jalan di pycharm
         pwd = input('Password = ')
         for x in acc:
-            if (user == x[0]) and (pwd == x[1]) :
+            if (user == x[0]) and (pwd == x[1]):
                 print ('Selamat Datang',user,'Tekan Enter untuk lanjut')
                 input()
                 main_admin()
                 z = True
                 break
-            elif (user == x[0]) and pwd != x[1]:
-                print('Password Salah')
-            else:
-                print('Username/Password Salah')
+        if not z:
+            print('Username/Password Salah')
             a = a+1
-    if a == 3 :
-        print ('sudah 3x input')
-        print()
+        if a == 3 :
+            print ('sudah 3x salah')
+            input()
+            print("\n")
+            break
     os.system('cls')
     #header.header()

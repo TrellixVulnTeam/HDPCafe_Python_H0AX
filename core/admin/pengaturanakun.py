@@ -3,9 +3,16 @@
 from core.admin.account.hapusakun import hapusAkun
 from core.admin.account.tambahakun import tambahAkun
 from core.admin.account.ubahpassword import ubahPassword
+from core.admin.simpanData import simpanData
+from core.admin.lihatbarang import lihatBarang
+import os.path
+
 
 
 def pengaturanAkun():
+    scriptpath = os.path.dirname(__file__)
+    filename = os.path.join(scriptpath, 'user.txt')
+    L = lihatBarang(filename)
     print()
     print("==============================================")
     print("Pengaturan Akun")
@@ -18,10 +25,9 @@ def pengaturanAkun():
     pilihAkun = int(input("Masukkan Pilihan : "))
 
     if pilihAkun == 1:
-        tambahAkun()
+        La=tambahAkun(L)
+        simpanData(La, filename)
     elif pilihAkun == 2:
         ubahPassword()
     elif pilihAkun == 3:
         hapusAkun()
-
-    return pengaturanAkun()

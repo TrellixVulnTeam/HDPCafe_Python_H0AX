@@ -7,10 +7,9 @@ def tambahAkun(L):
     print("===========================")
     print()
     print("Masukkan Username\t\t: ", end="")
-    id = input()
+    user = input()
     print("Masukkan Password\t\t: ", end="")
     password = input()
-
-    recordAkun=[id,password]
-    L.append(recordAkun)
+    La=[user, password]
+    L.append(La)
     return L

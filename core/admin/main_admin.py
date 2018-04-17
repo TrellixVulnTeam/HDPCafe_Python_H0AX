@@ -30,7 +30,7 @@ def main_admin():
         pilih = int(input("Masukan Pilihan = "))
 
         if os.path.exists("barang.txt"):
-            L=lihatBarang()
+            L=lihatBarang("barang.txt")
             if pilih == 1:
                 L1=tambahBarang(L)
                 simpanData(L1, 'barang.txt')
@@ -47,8 +47,7 @@ def main_admin():
                     print(x)
                 input()
             elif pilih == 6:
-                pass
-                #pengaturanakun()
+                pengaturanAkun()
             elif pilih == 7:
                 break
             else:

@@ -2,9 +2,8 @@
 
 from core.tentangAplikasi import tentangAplikasi
 from core.keluarAplikasi import keluarAplikasi
-from core.admin.main_admin import main_admin
 from core.user.main_user import main_user
-from core.auth import auth
+from core.admin.auth import auth
 
 #Pendukung untuk membuat Asci Art
 import sys
@@ -27,11 +26,13 @@ while loop:
     print("3. Tentang Aplikasi")
     print("4. Keluar")
     print()
-
-    pilih=int(input("Masukkan Pilihan : "))
+    try:
+        pilih=int(input("Masukkan Pilihan (1-4): "))
+    except ValueError:
+        pilih=0
     if pilih == 1 :
         auth()
-    elif pilih ==2 :
+    elif pilih == 2 :
         main_user()
     elif pilih == 3 :
         tentangAplikasi()

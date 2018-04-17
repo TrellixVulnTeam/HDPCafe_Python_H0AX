@@ -1,7 +1,6 @@
-# Logic untuk pilihan melihat barang
 import json
-def lihatBarang():
-    op=open("barang.txt", "r")
+def lihatBarang(nama):
+    op=open(nama, "r")
     L=json.load(op)
     op.close()
     L.sort()
