@@ -14,9 +14,8 @@ def tambahMenu(L):
             if L[i-1][0]==i:
                 i=i+1
             else:
-                n=i
                 break
-        L1 = [n,nama,harga]
+        L1 = [i,nama,harga]
         L.append(L1)
         L.sort()
         for a in L:

@@ -13,7 +13,7 @@ from pyfiglet import figlet_format
 
 #Asci Art, terlalu banyak font ASCI dan gw masih binggung font yang bagus apa..
 init(strip=not sys.stdout.isatty())
-cprint(figlet_format('HDP Cafe!', font='isometric4'))
+cprint(figlet_format('HDP Cafe!', font='starwars'))
 
 loop=True
 while loop:

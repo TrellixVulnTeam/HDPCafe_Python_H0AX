@@ -40,5 +40,6 @@ def auth():
             input()
             print("\n")
             break
+    conn.close()
     os.system('cls')
     #header.header()
