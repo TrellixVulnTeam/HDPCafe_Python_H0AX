@@ -6,7 +6,6 @@ from core.admin.updatemenu import updateMenu
 from core.admin.hapusmenu import hapusMenu
 from core.admin.carimenu import cariMenu
 from core.admin.lihatmenu import lihatMenu
-from core.admin.pengaturanakun import pengaturanAkun
 from core.admin.simpanData import simpanData
 from core.admin.tambahmenu import tambahMenu
 
@@ -23,8 +22,7 @@ def main_admin():
         print("3. Hapus Menu")
         print("4. Cari Menu")
         print("5. Lihat Menu")
-        print("6. Pengaturan Akun")
-        print("7. Kembali ke Menu Utama")
+        print("6. Kembali ke Menu Utama")
         print("==================================")
         print()
         pilih = int(input("Masukan Pilihan = "))
@@ -47,8 +45,6 @@ def main_admin():
                     print(x)
                 input()
             elif pilih == 6:
-                pengaturanAkun()
-            elif pilih == 7:
                 break
             else:
                 print("Menu tidak ditemukan")
