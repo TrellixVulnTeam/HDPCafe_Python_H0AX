@@ -19,36 +19,43 @@ def checkout(La, total):
     print("1. Ya")
     print("2. Batalkan")
     print()
-    pilihCheckout = int(input("Masukan Pilihan = "))
+    loop = True
+    while loop:
+        try:
+            pilihCheckout = int(input("Masukan Pilihan = "))
+        except ValueError:
+            pilihCheckout = 0
+        if pilihCheckout == 1 :
+            lanjutPembayaran(La, total)
+            La = []
+            total = 0
+            break
+        elif pilihCheckout ==2 :
+            print("Pesanan Anda dibatalkan, Tekan Enter untuk Kembali ke Menu.")
+            La=[]
+            total=0
+            break
+        else:
+            print("Menu tidak ditemukan")
+            input()
+    return La, total
 
-    if pilihCheckout == 1 :
-        lanjutPembayaran()
-    elif pilihCheckout ==2 :
-        print("Pesanan Anda dibatalkan, Tekan Enter untuk Kembali ke Menu.")
-    else:
-        print("Menu tidak ditemukan")
-        input()
-    return pilihCheckout
-
-def lanjutPembayaran():
+def lanjutPembayaran(La, total):
     print()
     print("==========================")
     print("Lanjut Pembayaran")
     print("==========================")
     print()
-    print("Total Harga : Rp 51.500")
+    print("Total Harga :", "Rp."+str(total))
     print()
-    uangKonsumen = input("Silahkan Input Uang Anda, Untuk Membayar")
-    if (uangKonsumen > 51500) :
-        print("Pembayaran Berhasil, Uang Kembalian Anda Rp 0")
-        print()
+    uangKonsumen = int(input("Silahkan Input Uang Anda, Untuk Membayar : "))
+    if (uangKonsumen > total):
+        kembali = uangKonsumen-total
+        print("Kembalian anda :", "Rp."+str(kembali))
         nota = input("Apakah anda ingin mencetak receipt? (Y/N) : ")
-        if (nota == "Y", "y") :
+        if nota == "Y" or nota == "y" :
             print("Mencetak nota..")
-        else :
+        elif nota == "N" or nota == "n":
             print("Tidak Mencetak nota, Silahkan Tekan Enter untuk Kembali.")
     else :
         print("Uang Tidak Mencukupi")
-
-
-    return lanjutPembayaran()

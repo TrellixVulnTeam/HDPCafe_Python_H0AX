@@ -40,8 +40,10 @@ def main_user():
                 print("Anda belum memesan apapun")
                 input()
             else:
-                checkout(La, total)
+                La, total = checkout(La, total)
         elif pilih == 5 :
+            La=[]
+            total=0
             break
         else:
             print("Menu tidak ditemukan")

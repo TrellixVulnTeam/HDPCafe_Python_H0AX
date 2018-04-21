@@ -32,7 +32,7 @@ def minuman(La, total):
                 tambah=0
             if tambah=="N" or tambah=="n":
                 loop=False
-                breakk
+                break
             elif tambah=="Y" or tambah=="y":
                 break
             else:
