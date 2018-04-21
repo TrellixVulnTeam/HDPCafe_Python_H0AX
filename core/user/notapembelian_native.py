@@ -10,26 +10,22 @@ from pyfiglet import figlet_format
 init(strip=not sys.stdout.isatty())
 cprint(figlet_format('HDP Cafe!', font='starwars'))
 
-def notanative():
+def notanative(La, total, kembali, uangKonsumen):
+    p=[]
+    i=1
     print()
-    print("--------------------------------------------------")
-    print("                     Nota Pembelian")
-    print("                        HDP CAFE")
-    print("                  Jalan Cafetaria No 6")
-    print("--------------------------------------------------")
-    print()
-    print("Daftar Barang yang telah anda beli : ")
-    print()
-    print("1. Indomie Dobel Telor - Rp 12000")
-    print("2. AQUA Botol - Rp 3000")
-    print()
-    print("Total Belanja : Rp 15000")
-    print()
-    print("Uang yang diberikan : Rp 20000")
-    print("Kembalian : Rp 5000")
-    print()
-    print("Terimakasih Sudah Datang Ke HDP Cafe!")
-    print()
-    print("--------------------------------------------------")
-
-    return notanative()
+    a=("--------------------------------------------------"
+    "\n                     Nota Pembelian"
+    "\n                        HDP CAFE"
+    "\n                  Jalan Cafetaria No 6"
+    "\n--------------------------------------------------\n"
+    "\nDaftar Barang yang telah anda beli : \n")
+    for x in La:
+        pa=[i, x[1], "---", "Rp."+str(x[2])]
+        p.append(pa)
+    b=("\nTotal Belanja : "+"Rp."+str(total)+"\n"
+    "\nUang yang diberikan : "+"Rp."+str(uangKonsumen)+"\n"
+    "Kembalian : "+"Rp."+str(kembali)+"\n"
+    "Terimakasih Sudah Datang Ke HDP Cafe!\n"
+    "--------------------------------------------------")
+    return a,p,b

@@ -1,5 +1,9 @@
 # logic untuk layout checkout
 
+import os.path
+from core.user.notapembelian import cetak
+from core.user.notapembelian_native import notanative
+
 def checkout(La, total):
     print()
     print("========================")
@@ -48,14 +52,35 @@ def lanjutPembayaran(La, total):
     print()
     print("Total Harga :", "Rp."+str(total))
     print()
-    uangKonsumen = int(input("Silahkan Input Uang Anda, Untuk Membayar : "))
-    if (uangKonsumen > total):
-        kembali = uangKonsumen-total
-        print("Kembalian anda :", "Rp."+str(kembali))
-        nota = input("Apakah anda ingin mencetak receipt? (Y/N) : ")
-        if nota == "Y" or nota == "y" :
-            print("Mencetak nota..")
-        elif nota == "N" or nota == "n":
-            print("Tidak Mencetak nota, Silahkan Tekan Enter untuk Kembali.")
-    else :
-        print("Uang Tidak Mencukupi")
+    loop=True
+    while loop:
+        try:
+            uangKonsumen = int(input("Silahkan Input Uang Anda, Untuk Membayar : "))
+        except ValueError:
+            uangKonsumen = 0
+        if (uangKonsumen >= total):
+            loop2=True
+            loop=False
+            while loop2:
+                kembali = uangKonsumen-total
+                print("Kembalian anda :", "Rp."+str(kembali))
+                a, p, b = notanative(La, total, kembali, uangKonsumen)
+                j = ""
+                for z in p:
+                    k = str(z[1]) + " " + str(z[2]) + " " + str(z[3])
+                    j = j + k
+                isi = str(a) + str(j) + str(b)
+                print(isi)
+                nota = input("Apakah anda ingin mencetak receipt? (Y/N) : ")
+                if nota == "Y" or nota == "y" :
+                    cetak(isi)
+                    break
+                elif nota == "N" or nota == "n":
+                    print("Tidak Mencetak nota, Silahkan Tekan Enter untuk Kembali.")
+                    break
+                else:
+                    print("Input Salah")
+                    input()
+        else :
+            print("Uang Tidak Mencukupi atau Input Salah")
+            input()

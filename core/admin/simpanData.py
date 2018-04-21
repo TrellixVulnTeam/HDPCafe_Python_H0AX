@@ -4,5 +4,5 @@ import json
 def simpanData(L, nama):
     with open(nama, 'w') as file:
         json.dump(L, file)
-        print("Data menu berhasil disimpan, tekan enter untuk melanjutkan")
+        print("Data berhasil disimpan, tekan enter untuk melanjutkan")
         input()
