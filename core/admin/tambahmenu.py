@@ -9,13 +9,15 @@ def tambahMenu(L):
         nama = input()
         print("Masukkan harga menu", end=": ")
         harga = int(input())
+        print("Masukkan jenis menu (1:makanan, 2:minuman)", end=": ")
+        jenis = int(input())
         L.sort()
         while i-1<x:
             if L[i-1][0]==i:
                 i=i+1
             else:
                 break
-        L1 = [i,nama,harga]
+        L1 = [i,nama,harga,jenis]
         L.append(L1)
         L.sort()
         for a in L:
