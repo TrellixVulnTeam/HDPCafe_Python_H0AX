@@ -1,7 +1,7 @@
-# HDP Mart
-python basic applications about the purchase of goods in mini market, and this project is made based on fulfilling the big task of basic algorithm course and programming at telkom university majoring in computation science.
+# HDP Cafe
+python basic applications about transaction system in a cafe, and this project is made to fulfill a work given to us in basic algorithm course and programming at telkom university majoring in computation science.
 
-this program build using PyCharm® & Python 3.6
+this program is built using PyCharm® & Python 3.6
 
 # who is the creator of this app?
 - Hilman Abdan [@mystald](https://github.com/mystald)
