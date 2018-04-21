@@ -17,7 +17,9 @@ def updateMenu(L):
             nama=input()
             print("Harga menu", end=": ")
             harga=int(input())
-            L[i]=[id,nama,harga]
+            print("Jenis menu(1: Makanan, 2: Minuman)", end=": ")
+            jenis=int(input())
+            L[i]=[id,nama,harga,jenis]
             for x in L:
                 print(x)
         else:
