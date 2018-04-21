@@ -18,7 +18,7 @@ def checkout(La, total):
     print("==========================")
     print("Total Harga :", "Rp."+str(total))
     input()
-    print("Lanjutkan Pembayaran?")
+    print("Lanjutkan Pembayaran? (1-2)")
     print()
     print("1. Ya")
     print("2. Batalkan")
