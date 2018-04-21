@@ -15,7 +15,7 @@ def main_user():
         print("==================================")
         print("1. Aneka Minuman")
         print("2. Aneka Makanan")
-        print("3. Lihat Keranjang")
+        print("3. Lihat Cart")
         print("4. Checkout")
         print("5. Kembali ke menu Utama")
         print("==================================")
